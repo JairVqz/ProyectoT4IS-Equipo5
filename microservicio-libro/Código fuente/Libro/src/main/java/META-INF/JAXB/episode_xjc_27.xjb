@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2022.05.17 a las 05:37:52 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="https://t4is.uv.mx/libro">
+    <schemaBindings map="false">
+      <package name="https.t4is_uv_mx.libro"/>
+    </schemaBindings>
+    <bindings scd="tns:BuscarLibroResponse">
+      <class ref="https.t4is_uv_mx.libro.BuscarLibroResponse"/>
+    </bindings>
+    <bindings scd="tns:MostrarLibrosResponse">
+      <class ref="https.t4is_uv_mx.libro.MostrarLibrosResponse"/>
+    </bindings>
+    <bindings scd="tns:GuardarLibroRequest">
+      <class ref="https.t4is_uv_mx.libro.GuardarLibroRequest"/>
+    </bindings>
+    <bindings scd="tns:GuardarLibroResponse">
+      <class ref="https.t4is_uv_mx.libro.GuardarLibroResponse"/>
+    </bindings>
+    <bindings scd="tns:BuscarLibroRequest">
+      <class ref="https.t4is_uv_mx.libro.BuscarLibroRequest"/>
+    </bindings>
+    <bindings scd="tns:ModificarLibroRequest">
+      <class ref="https.t4is_uv_mx.libro.ModificarLibroRequest"/>
+    </bindings>
+    <bindings scd="tns:ModificarLibroResponse">
+      <class ref="https.t4is_uv_mx.libro.ModificarLibroResponse"/>
+    </bindings>
+    <bindings scd="tns:EliminarLibroRequest">
+      <class ref="https.t4is_uv_mx.libro.EliminarLibroRequest"/>
+    </bindings>
+    <bindings scd="tns:EliminarLibroResponse">
+      <class ref="https.t4is_uv_mx.libro.EliminarLibroResponse"/>
+    </bindings>
+    <bindings scd="tns:TotalLibroResponse">
+      <class ref="https.t4is_uv_mx.libro.TotalLibroResponse"/>
+    </bindings>
+  </bindings>
+</bindings>
+

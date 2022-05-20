@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="https://t4is.uv.mx/libro"
+ xmlns:tns="https://t4is.uv.mx/libro"
+ elementFormDefault="qualified">
+
+ <!--Guardar Libro-->
+ <xs:element name="GuardarLibroRequest">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="titulo" type="xs:string"/>
+    <xs:element name="autor" type="xs:string"/>
+    <xs:element name="editorial" type="xs:string"/>
+    <xs:element name="categoria" type="xs:string"/>
+    <xs:element name="descripcion" type="xs:string"/>
+    <xs:element name="statusPrestamo" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+</xs:element>
+ <xs:element name="GuardarLibroResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="respuesta" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!-- Buscar libro -->
+ <xs:element name="BuscarLibroRequest">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />            
+      <xs:element name="titulo" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ <xs:element name="BuscarLibroResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="libros" maxOccurs="unbounded">
+           <xs:complexType>
+             <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+                <xs:element name="titulo" type="xs:string"/>
+                <xs:element name="autor" type="xs:string"/>
+                <xs:element name="editorial" type="xs:string"/>
+                <xs:element name="categoria" type="xs:string"/>
+                <xs:element name="descripcion" type="xs:string"/>
+                <xs:element name="statusPrestamo" type="xs:string"/>
+             </xs:sequence>           
+           </xs:complexType>
+     </xs:element>
+    </xs:sequence>     
+  </xs:complexType>
+ </xs:element>
+
+ <!--Mostrar Libro-->
+ <xs:element name="MostrarLibrosRequest"/>
+ <xs:element name="MostrarLibrosResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="libros" maxOccurs="unbounded">
+           <xs:complexType>
+             <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+                <xs:element name="titulo" type="xs:string"/>
+                <xs:element name="autor" type="xs:string"/>
+                <xs:element name="editorial" type="xs:string"/>
+                <xs:element name="categoria" type="xs:string"/>
+                <xs:element name="descripcion" type="xs:string"/>
+                <xs:element name="statusPrestamo" type="xs:string"/>
+             </xs:sequence>
+           </xs:complexType>
+    </xs:element>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!--Modificar Libro-->
+ <xs:element name="ModificarLibroRequest">
+  <xs:complexType>
+    <xs:sequence>
+        <xs:element name="id" type="xs:int"/>
+        <xs:element name="titulo" type="xs:string"/>
+        <xs:element name="autor" type="xs:string"/>
+        <xs:element name="editorial" type="xs:string"/>
+        <xs:element name="categoria" type="xs:string"/>
+        <xs:element name="descripcion" type="xs:string"/>
+        <xs:element name="statusPrestamo" type="xs:string"/>
+    </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModificarLibroResponse">
+    <xs:complexType>
+     <xs:sequence>
+        <xs:element name="respuesta" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+   
+ <!--Eliminar Libro-->
+ <xs:element name="EliminarLibroRequest">
+  <xs:complexType>
+    <xs:sequence>
+  <xs:element name="id" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ <xs:element name="EliminarLibroResponse">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="respuesta" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!--Total de Libros-->
+ <xs:element name="TotalLibroRequest"/>
+ <xs:element name="TotalLibroResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="respuesta" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+ 
+</xs:schema> 
