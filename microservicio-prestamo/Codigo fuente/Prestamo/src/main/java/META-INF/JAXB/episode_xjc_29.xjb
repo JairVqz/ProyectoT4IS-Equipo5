@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2022.06.01 a las 03:36:52 PM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="https://t4is.uv.mx/prestamo">
+    <schemaBindings map="false">
+      <package name="https.t4is_uv_mx.prestamo"/>
+    </schemaBindings>
+    <bindings scd="tns:MostrarPrestamoResponse">
+      <class ref="https.t4is_uv_mx.prestamo.MostrarPrestamoResponse"/>
+    </bindings>
+    <bindings scd="tns:PrestamoResponse">
+      <class ref="https.t4is_uv_mx.prestamo.PrestamoResponse"/>
+    </bindings>
+    <bindings scd="tns:GuardarPrestamoRequest">
+      <class ref="https.t4is_uv_mx.prestamo.GuardarPrestamoRequest"/>
+    </bindings>
+    <bindings scd="tns:GuardarPrestamoResponse">
+      <class ref="https.t4is_uv_mx.prestamo.GuardarPrestamoResponse"/>
+    </bindings>
+    <bindings scd="tns:RenovarPrestamoRequest">
+      <class ref="https.t4is_uv_mx.prestamo.RenovarPrestamoRequest"/>
+    </bindings>
+    <bindings scd="tns:RenovarPrestamoResponse">
+      <class ref="https.t4is_uv_mx.prestamo.RenovarPrestamoResponse"/>
+    </bindings>
+    <bindings scd="tns:StatusPrestamoRequest">
+      <class ref="https.t4is_uv_mx.prestamo.StatusPrestamoRequest"/>
+    </bindings>
+    <bindings scd="tns:StatusPrestamoResponse">
+      <class ref="https.t4is_uv_mx.prestamo.StatusPrestamoResponse"/>
+    </bindings>
+    <bindings scd="tns:PrestamoPorClienteRequest">
+      <class ref="https.t4is_uv_mx.prestamo.PrestamoPorClienteRequest"/>
+    </bindings>
+  </bindings>
+</bindings>
+

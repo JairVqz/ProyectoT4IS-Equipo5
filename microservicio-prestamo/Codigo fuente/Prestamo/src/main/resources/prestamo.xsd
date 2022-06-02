@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ targetNamespace="https://t4is.uv.mx/prestamo"
+ xmlns:tns="https://t4is.uv.mx/prestamo"
+ elementFormDefault="qualified">
+
+ <!--Realizar Prestamo-->
+ <xs:element name="GuardarPrestamoRequest">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="finicio" type="xs:string"/>
+    <xs:element name="ffin" type="xs:string"/>
+    <xs:element name="nomcliente" type="xs:string"/>
+    <xs:element name="titulolibro" type="xs:string"/>
+    <xs:element name="status" type="xs:string"/>
+    <xs:element name="responsable" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+</xs:element>
+ <xs:element name="GuardarPrestamoResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="respuesta" type="xs:string"/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <!--Renovar Prestamo-->
+ <xs:element name="RenovarPrestamoRequest">
+  <xs:complexType>
+    <xs:sequence>
+        <xs:element name="id" type="xs:int"/>
+        <xs:element name="finicio" type="xs:string"/> 
+        <xs:element name="ffin" type="xs:string"/>
+        <xs:element name="nomcliente" type="xs:string"/> 
+        <xs:element name="titulolibro" type="xs:string"/> 
+        <xs:element name="status" type="xs:string"/> 
+        <xs:element name="responsable" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RenovarPrestamoResponse">
+    <xs:complexType>
+     <xs:sequence>
+        <xs:element name="respuesta" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+
+ <!--Mostrar Prestamos-->
+ <xs:element name="MostrarPrestamoRequest"/>
+ <xs:element name="MostrarPrestamoResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="prestamo" maxOccurs="unbounded">
+           <xs:complexType>
+             <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+                <xs:element name="finicio" type="xs:string"/>
+                <xs:element name="ffin" type="xs:string"/>
+                <xs:element name="nomcliente" type="xs:string"/>
+                <xs:element name="titulolibro" type="xs:string"/>
+                <xs:element name="status" type="xs:string"/>
+                <xs:element name="responsable" type="xs:string"/>
+             </xs:sequence>
+           </xs:complexType>
+    </xs:element>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element> 
+
+ <!-- Buscar status del prestamo -->
+ <xs:element name="StatusPrestamoRequest">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />            
+      <xs:element name="titulolibro" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+<xs:element name="StatusPrestamoResponse">
+    <xs:complexType>
+     <xs:sequence>
+        <xs:element name="respuesta" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+
+  <!--Buscar Prestamo por cliente-->
+  <xs:element name="PrestamoPorClienteRequest">
+  <xs:complexType>
+    <xs:sequence>            
+      <xs:element name="nomCliente" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+<xs:element name="PrestamoPorClienteResponse">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="prestamo" maxOccurs="unbounded">
+           <xs:complexType>
+             <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+                <xs:element name="finicio" type="xs:string"/>
+                <xs:element name="ffin" type="xs:string"/>
+                <xs:element name="nomcliente" type="xs:string"/>
+                <xs:element name="titulolibro" type="xs:string"/>
+                <xs:element name="status" type="xs:string"/>
+                <xs:element name="responsable" type="xs:string"/>
+             </xs:sequence>
+           </xs:complexType>
+    </xs:element>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element> 
+
+
+</xs:schema> 
